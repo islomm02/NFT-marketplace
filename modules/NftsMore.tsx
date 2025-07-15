@@ -37,7 +37,9 @@ const NftsMore: FC<NftsPageType> = ({ nfts }) => {
                     iconPostion="left"
                 />
             </div>
-            {Nfts.data.map((item: NftType) => (<NftCard item={item} key={item.id} />))}
+            <div className="flex gap-[30px] mb-[80px] ">
+                {Nfts.data.map((item: NftType) => (<NftCard item={item} key={item.id} />))}
+            </div>
         </div>
     );
 };

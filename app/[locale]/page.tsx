@@ -1,7 +1,10 @@
+import CenterImg from "@/components/CenterImg";
 import Categories from "@/modules/Categories";
 import Collections from "@/modules/Collections";
 import Creators from "@/modules/Creators";
+import Digest from "@/modules/Digest";
 import Hero from "@/modules/Hero";
+import HowItWorks from "@/modules/HowItWorks";
 import NftsMore from "@/modules/NftsMore";
 import { getRequest } from "@/service/getRequest";
 import React from "react";
@@ -20,6 +23,9 @@ export default async function Home() {
       <Creators artists={artists} />
       <Categories category={category} />
       <NftsMore nfts={nfts} />
+      <CenterImg/>
+      <HowItWorks/>
+      <Digest/>
     </>
   );
 }
