@@ -20,7 +20,7 @@ const Collections: FC<CollectionPageType> = ({ collection }) => {
                 <Text classList='!text-[22px] !mb-[60px]'>Checkout our weekly updated trending collection.</Text>
                 <div className='flex justify-between'>
                     {collections.data.map((item: CollectionType) => <CollectionCard key={item.id} item={item} />)}
-                </div>
+                </div>  
             </div>
         </section>
     )

@@ -9,7 +9,7 @@ const Header = () => {
   const t = useTranslations("HeadersContent")
   return (
     <header className="fixed bg-[#2B2B2B] w-full top-0 lg:px-0 z-50">
-      <div className="containers flex items-center justify-between mx-auto !py-5">
+      <div className=" px-[50px] flex items-center justify-between mx-auto !py-5">
         <Link href={'/'}>
           <Image className="w-[182px] h-[24px] lg:w-[243px] lg:h-[32px] " priority src={"/site-logo.svg"} alt="Site Logo" width={243} height={32} />
         </Link>

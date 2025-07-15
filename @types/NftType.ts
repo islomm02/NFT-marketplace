@@ -1,3 +1,5 @@
+import { ArtistType } from "./ArtistType";
+
 export interface NftType {
   id: string;
   title: string;
@@ -8,4 +10,5 @@ export interface NftType {
   updatedAt: string;
   creatorId: string;
   ownerId: string;
+  creator: ArtistType
 }
