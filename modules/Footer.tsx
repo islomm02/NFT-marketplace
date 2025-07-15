@@ -1,93 +1,51 @@
-import { LogoIcon } from "@/public/icons/Logo";
-import {
-    DiscordFilled,
-    DiscordOutlined,
-    InstagramOutlined,
-    TwitterOutlined,
-    YoutubeFilled,
-    YoutubeOutlined,
-} from "@ant-design/icons";
+import { Discord, Instagram, Twitter, YouTube } from "@/assets/icons"
+import Heading from "@/components/Heading"
+import Text from "@/components/Text"
+import { Link } from "@/i18n/navigation"
+import Image from "next/image"
 
-function Footer() {
-    return (
-        <div>
-        <div className="bg-[#3B3B3B]  px-[115px] py-[40px] flex justify-between">
-            <div className="w-[327px]">
-                <div className="w-[243px]">
-                    <div className="flex items-center gap-3 pb-[32px] ">
-                        <LogoIcon />
-                        <h1 className=" text-white text-[25px] font-semibold">
-                            NFT marketplace
-                        </h1>
-                    </div>
-                    <strong className=" font-light text-[16px] text-[#CCCCCC] ">
-                        NFT marketplace UI created with Anima for Figma
-                    </strong>
-                    <div className="flex flex-col gap-[15px] pt-5">
-                        <strong className="font-light text-[16px] text-[#CCCCCC] ">
-                            Join our community
-                        </strong>
-                        <ul className="flex gap-[10px]">
-                            <li className="text-[#858584]">
-                                <DiscordOutlined style={{ fontSize: "32px" }} />{" "}
-                            </li>
-                            <li className="text-[#858584]">
-                                <YoutubeOutlined style={{ fontSize: "32px" }} />{" "}
-                            </li>
-                            <li className="text-[#858584]">
-                                <TwitterOutlined style={{ fontSize: "32px" }} />
-                            </li>
-                            <li className="text-[#858584]">
-                                <InstagramOutlined
-                                    style={{ fontSize: "32px" }}
-                                />
-                            </li>
-                        </ul>
-                    </div>
+const Footer = () => {
+  return (
+    <footer className="bg-[#3B3B3B] py-10">
+      <div className="containers">
+        <div className="flex flex-col lg:flex-row gap-[30px] lg:gap-0 justify-between">
+            <div className="w-[238px]">
+              <Link className="!mb-[30px] inline-block" href={"/"}>
+                <Image src={"/site-logo.svg"} alt="Site Logo" width={243} height={32}/>
+              </Link>
+              <Text classList="!mb-[20px]">NFT marketplace UI created with Anima for Figma.</Text>
+              <div>
+                <Text classList="!mb-[15px]">Join our community</Text>
+                <div className="flex items-center gap-[10px]">
+                  <Link href={'/'}>
+                    <Discord/>
+                  </Link>
+                  <Link href={'/'}>
+                    <YouTube/>
+                  </Link>
+                  <Link href={'/'}>
+                    <Twitter/>
+                  </Link>
+                  <Link href={'/'}>
+                    <Instagram/>
+                  </Link>
                 </div>
+              </div>
             </div>
-            <div className="w-[240px]">
-                <div>
-                    <div className="flex items-center gap-3 pb-[32px] ">
-                        <h1 className=" text-white text-[25px] font-semibold">
-                            Explore
-                        </h1>
-                    </div>
-                    <strong className=" font-light text-[16px] text-[#CCCCCC] ">
-                        Marketplace
-                    </strong>
-                    <div className="flex flex-col gap-[15px] pt-5">
-                        <strong className="font-light text-[16px] text-[#CCCCCC] ">
-                            Rankings
-                        </strong>
-                        <strong className="font-light text-[16px] text-[#CCCCCC] ">
-                            Connect a wallet
-                        </strong>
-                    </div>
-                </div>
+            <div>
+              <Heading tag="h3" classList="!mb-[25px] !text-[22px]">Explore</Heading>
+              <Text>Marketplace</Text>
+              <Text classList="!my-[20px]">Rankings</Text>
+              <Text>Connect a wallet</Text>
             </div>
-
-            <div className="w-[420px]">
-                <div className="flex flex-col gap-[20px]">
-                    <div className="w-[295px] flex flex-col gap-[25px]">
-                        <h1 className=" text-white text-[25px] font-semibold">
-                        Join our weekly digest
-                    </h1>
-                    <strong className=" font-light text-[16px] text-[#CCCCCC] ">
-                        Get exclusive promotions & updates straight to your
-                        inbox.
-                    </strong>
-                    </div>
-                    <div className="bg-white rounded-[20px] flex justify-between">
-                        <input placeholder="Enter your email here" className="bg-white px-[20px] py-[19px] rounded-[20px]" type="text" />
-                        <button className="bg-[#A259FF] text-white text-4 font-semibold px-[50px] py-[19px] rounded-[20px] ">Subscribe</button>
-                    </div>
-                </div>
+            <div className="w-[330px]">
+              <Heading tag="h3" classList="!mb-[25px] !text-[22px]">Join our weekly digest</Heading>
+              <Text classList="!mb-[20px]">Get exclusive promotions & updates straight to your inbox.</Text>
             </div>
-
         </div>
-        </div>
-    );
+      </div>
+    </footer>
+  )
 }
 
-export default Footer;
+export default Footer
