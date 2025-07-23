@@ -19,7 +19,8 @@ const NftsMore: FC<NftsPageType> = ({ nfts }) => {
         isLoading,
         error,
     } = getQueryData("/nfts", nfts, "nfts");
-    console.log(Nfts);
+    console.log(Nfts)
+    
     
     return (
         <div className="containers mt-[80px] ">
@@ -33,12 +34,13 @@ const NftsMore: FC<NftsPageType> = ({ nfts }) => {
                     title="See All"
                     type="button"
                     variant="outlined"
+
                     icon={<EyeIcon />}
                     iconPostion="left"
                 />
             </div>
             <div className="flex gap-[30px] mb-[80px] ">
-                {Nfts.data.map((item: NftType) => (<NftCard item={item} key={item.id} />))}
+                {Nfts.data.slice(0, 3).map((item: NftType) => (<NftCard item={item} key={item.id} />))}
             </div>
         </div>
     );

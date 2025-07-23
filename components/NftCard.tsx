@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React, { FC } from "react";
 import Heading from "./Heading";
@@ -7,9 +8,9 @@ import Text from "./Text";
 
 const NftCard: FC<{ item: NftType }> = ({ item }) => {
     return (
-        <div className="!bg-[#3B3B3B] !w-[330px] !h-[469px] rounded-[20px]  ">
+        <div className="!bg-[#3B3B3B] !w-[330px] !h-auto rounded-[20px]  ">
             <Image
-                className=" w-[330px] h-[296px] object-cover rounded-[20px] "
+                className=" w-[330px] h-auto object-cover rounded-[20px] "
                 alt="Category background image"
                 src={`${API}/file/${item.image}`}
                 priority
@@ -23,7 +24,7 @@ const NftCard: FC<{ item: NftType }> = ({ item }) => {
                         width={24}
                         height={24}
                         alt="Author Image"
-                        className="!rounded-full"
+                        className="!rounded-full w-[24px] h-[24px] "
                         src={`${API}/file/${item.creator.image}`}
                     />
                     <Text  children={item.creator.username} />

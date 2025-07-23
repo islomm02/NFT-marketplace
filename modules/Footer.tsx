@@ -41,7 +41,12 @@ const Footer = () => {
             <div className="w-[330px]">
               <Heading tag="h3" classList="!mb-[25px] !text-[22px]">Join our weekly digest</Heading>
               <Text classList="!mb-[20px]">Get exclusive promotions & updates straight to your inbox.</Text>
+              <div className="bg-white rounded-[20px] !w-[420px]  flex justify-between">
+                            <input placeholder="Enter your email here" className="bg-white text-black px-[20px] py-[19px] rounded-[20px]" type="text" />
+                            <button className="bg-[#A259FF] text-white flex gap-3 items-center text-4 font-semibold px-[50px] py-[19px] rounded-[20px] "> Subscribe</button>
+                        </div>
             </div>
+            
         </div>
       </div>
     </footer>
